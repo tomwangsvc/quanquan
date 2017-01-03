@@ -1,0 +1,391 @@
+
+/** desktop css*/
+@media (min-width: 768px) {	
+.recruitment_image{
+	width:100%; 
+}
+.recruitment-image-div{
+	width: 1074px;
+	margin:auto;
+	position: relative;
+	z-index: -999;
+}
+.recuit-index-border{
+	box-shadow: 1px 1px 2px #cccccc;
+}
+
+.recuit-index-save-btn{
+	background: #80bfff;
+	background-image: -webkit-linear-gradient(top, #80bfff, #2e779e);
+	background-image: -moz-linear-gradient(top, #80bfff, #2e779e);
+	background-image: -ms-linear-gradient(top, #80bfff, #2e779e);
+	background-image: -o-linear-gradient(top, #80bfff, #2e779e);
+	background-image: linear-gradient(to bottom, #80bfff, #2e779e);
+	-webkit-border-radius: 20;
+	-moz-border-radius: 20;
+	border-radius: 20px;
+	text-shadow: 2px 1px 3px #000000;
+	-webkit-box-shadow: 1px 1px 3px #666666;
+	-moz-box-shadow: 1px 1px 3px #666666;
+	box-shadow: 1px 1px 3px #666666;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 13px;
+	padding: 5px 10px 5px 10px;
+	text-decoration: none;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+.recuit-index-save-btn:hover {
+	background: #3cb0fd;
+	background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+	text-decoration: none;
+}
+.recuit-index-show-on-map{
+	border-radius: 10px 10px 10px 10px;
+}
+.recuit-index-show-on-map-icon{
+	width: 16px;
+	height: 16px;
+	margin-left: 3px;
+}
+.recuit-index-search-btn{
+	float: right;
+	background: #80bfff;
+	background-image: -webkit-linear-gradient(top, #80bfff, #2e779e);
+	background-image: -moz-linear-gradient(top, #80bfff, #2e779e);
+	background-image: -ms-linear-gradient(top, #80bfff, #2e779e);
+	background-image: -o-linear-gradient(top, #80bfff, #2e779e);
+	background-image: linear-gradient(to bottom, #80bfff, #2e779e);
+	-webkit-border-radius: 20;
+	-moz-border-radius: 20;
+	border-radius: 20px;
+	text-shadow: 2px 1px 3px #000000;
+	-webkit-box-shadow: 1px 1px 3px #666666;
+	-moz-box-shadow: 1px 1px 3px #666666;
+	box-shadow: 1px 1px 3px #666666;
+	font-family: Arial;
+	color: #ffffff;
+	padding:5px;
+	text-decoration: none;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+.recuit-index-search-btn:hover {
+	background: #3cb0fd;
+	background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+	text-decoration: none;
+}
+.recuit-index-search-input{
+	width: 250px;
+	font-size:12px; 
+	border-color:#cccccc; 
+	border-width:2px; 
+	border-radius:10px; 
+	border-style:hidden; 
+	box-shadow:inset 2px 1px 5px 0px rgba(42,42,42,.50); 
+	padding:5px; 	 
+}
+.recuit-index-search-input:focus{
+	outline:none;
+} 
+.recuit-index-drop-select{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	border: 0 !important;  /*Removes border*/
+	background: #ffffff url("/images/subnav-select-arrow.png") no-repeat 90% center;
+	-webkit-appearance: none;  /*Removes default chrome and safari style*/
+	-moz-appearance: none; /* Removes Default Firefox style*/
+    appearance:none;
+	width: 100px; /*Width of select dropdown to give space for arrow image*/
+	text-indent: 0.01px; /* Removes default arrow from firefox*/
+	text-overflow: "";  /*Removes default arrow from firefox*/ /*My custom style for fonts*/
+	color: #000;
+	border-radius: 3px;
+	padding: 5px;
+	box-shadow: inset 0 0 5px rgba(000,000,000, 0.5);
+}
+
+.recuit-index-container-main{
+	width: 1024px;
+	padding:30px 25px 30px 25px;
+	margin:auto;
+	margin-top: -50px;
+	overflow: auto;
+	z-index: 0;
+}
+.recuit-index-row-1{
+	float: left;
+	width: 30%;	
+}
+.recuit-index-col-google-map{
+	height: 400px;
+}
+.recuit-index-col-search{
+	background:rgba(255, 255, 255, 1);
+	margin-top: 10px;
+	padding:10px 10px 10px 10px;
+}
+.recuit-index-col-location{
+	background:rgba(255, 255, 255, 1);
+	margin-top: 10px;
+	padding:10px 10px 10px 10px;
+}
+.recuit-index-col-type{
+	background:rgba(255, 255, 255, 1);
+	margin-top: 10px;
+	padding:10px 10px 10px 10px;
+}
+.recuit-index-col-wage-range{
+	background:rgba(255, 255, 255, 1);
+	margin-top: 10px;
+	padding:10px 10px 10px 10px;
+}
+
+.recuit-index-col-qualification{
+	background:rgba(255, 255, 255, 1);
+	margin-top: 10px;
+	padding:10px 10px 10px 10px;
+}
+.recuit-index-col-save-search{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.recuit-index-row-2{
+	border-radius: 10px 10px 10px 10px;
+	float: right;
+	width: 68%;
+}
+.recuit-index-result-title{
+	padding-left:20px;
+}
+.recuit-index-logo-current{
+	margin-top: 5px;
+	width: 35px;
+	height: 35px
+}
+.recuit-index-col-current-page{
+	height: 45px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background:rgba(255, 255, 255, 1);
+	overflow: auto;
+}
+.recuit-index-col-current{
+	width: 70%;
+	float: left;
+	margin-top: 10px;
+}
+.recuit-index-current-color{
+	color: #0050cc;
+}
+div.recuit-index-col-current a{
+	font-weight: bold;
+}
+.recuit-index-col-result-num{
+	font-size: 0.8em;
+	float: right;
+	margin-top: 25px;
+}
+.recuit-index-result-num{
+	color: red;
+}
+
+.recuit-index-col-result{
+	overflow: auto;
+}
+.recuit-index-result-table{
+	width: 100%;
+}
+
+.recuit-index-dropdown-div{
+	width: 30%;
+	height: 200px;
+	border: 1px solid black;
+	border-radius: 5px;
+	float: right;
+	display: none;
+	z-index: 10;
+	position:absolute;
+	background-color: #80bfff;
+}
+.recuit-index-config-input{
+	font-weight: bold;
+	font-size: 0.8em;
+}
+input[type=checkbox].recuit-index-checkbox-input {
+	position:absolute; 
+	z-index:-1000; 
+	left:-1000px; 
+	overflow: hidden; 
+	clip: rect(0 0 0 0); 
+	height:1px; 
+	width:1px; 
+	margin:-1px; 
+	padding:0; 
+	border:0;
+
+}
+
+input[type=checkbox].recuit-index-checkbox-input + label.css-label {
+	padding-left:21px;
+	height:16px; 
+	display:inline-block;
+	line-height:16px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font-size:12px;
+	vertical-align:middle;
+	cursor:pointer;
+
+}
+
+input[type=checkbox].recuit-index-checkbox-input:checked + label.css-label {
+	background-position: 0 -16px;
+}
+label.css-label {
+	background-image:url("/images/csscheckbox.png");
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+.recuit-index-keyword-search-icon{
+	width: 16px;
+	height: 16px;
+}
+.recuit-index-save-search-icon{
+	width: 16px;
+	height: 16px;
+	margin-left: 3px;
+}
+.recuit-index-slide-icon{
+	width: 15px;
+	height: 15px;
+}
+ul.recuit-index-one-result li{
+	display: inline-block;
+}
+
+.recuit-index-map-marker{
+	width: 35px;
+}
+
+li.recuit-index-job-details-col div{
+	width: 480px;
+	word-wrap:break-word;
+}
+li.recuit-index-job-contect-col div.recuit-index-contect-details{
+	width: 100px;
+	margin-left: 10px;
+}
+.recuit-index-div-inimg{
+	width: 140px;
+	height: 70px;
+}
+.recuit-index-send-message{
+	border-radius: 10px 10px 10px 10px;
+}
+.recuit-index-send-message-icon{
+	width: 16px;
+	height: 16px;
+	margin-left: 3px;
+}
+.recuit-index-outer{
+	border-top: 2px solid rgba(0, 102, 255, 0.4);
+	margin-top: 20px;
+	padding:10px 10px 10px 10px;
+}
+.recuit-index-job-listing-attributes{
+	font-weight: bold;
+	font-size: 14;
+}
+ul.recuit-index-result-table li.recuit-index-outer{
+	background-color: #fff;
+}
+
+ul.recuit-index-pagination {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.recuit-index-pagination li {
+	display: inline;
+}
+
+ul.recuit-index-pagination li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+    margin: 0 4px;
+}
+
+ul.recuit-index-pagination li a.active {
+    background-color: #80bfff;
+    color: white;
+    border: 1px solid #80bfff;
+}
+
+ul.recuit-index-pagination li a:hover:not(.active) {
+	background-color: #ddd;
+}
+
+div.recuit-index-center {
+	/*display: none;*/
+	text-align: center;
+	margin-top: 10px;
+}
+.recuit-index-job-listing-short-summary{
+	height: 40px;
+}
+.recuit-index-save-to-watchlistLink{
+	background: #80bfff;
+	background-image: -webkit-linear-gradient(top, #80bfff, #2e779e);
+	background-image: -moz-linear-gradient(top, #80bfff, #2e779e);
+	background-image: -ms-linear-gradient(top, #80bfff, #2e779e);
+	background-image: -o-linear-gradient(top, #80bfff, #2e779e);
+	background-image: linear-gradient(to bottom, #80bfff, #2e779e);
+	text-shadow: 2px 1px 3px #000000;
+	-webkit-box-shadow: 1px 1px 3px #666666;
+	-moz-box-shadow: 1px 1px 3px #666666;
+	box-shadow: 1px 1px 3px #666666;
+	font-family: Arial;
+	color: #ffffff;
+	font-size: 13px;
+	text-decoration: none;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+.recuit-index-save-to-watchlistLink:hover {
+	background: #3cb0fd;
+	background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+	background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+	text-decoration: none;
+}
+
+}/**end of desktop css */
+
+

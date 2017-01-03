@@ -1,0 +1,79 @@
+<div class="postad-label">
+post an ad
+</div>
+ 
+<div class="container">
+<div class="postad-container1">
+          <header class="postad-field-word1">Select a category</header>
+          
+  			<ul class="postad-field1"  >
+             <?php
+			 $iconarr=array("icon-briefcase","icon-food","icon-home ",
+			"icon-glass","icon-plane","icon-beer","icon-laptop","icon-suitcase");
+			 $i=0;
+			 foreach ($this->categories as $item):?>
+                  <li class="postad-content1">  
+                      <div class="<?php echo $iconarr[$i]?>"></div>
+                        <?php $i++?>    
+                     	<a class="postad-a" value="<?php echo $item['category_id'] ?>"> <?php echo $item['category_name']?></a> <div style="text-align:right;margin-top:-15px"> <span class="icon-double-angle-right"></span>
+					</li>                     		
+					<div class="postad-container2" > 
+          					<header class="postad-field-word2">Select an option</header>
+         						 
+  									<ul class="postad-field2">
+                     	 
+                     	    	<?php foreach ($this->subcategories as $sub_item):?>
+                     	    	<?php if($sub_item["parent_id"]==$item["category_id"]):?>  
+								
+                     	    	<li class="postad-content2">              
+                     			<a class="postad-a" value="<?php echo $item['category_id'] ?>">
+                     	        </a> 
+                     	        <?php echo $sub_item['subcategory_name']?><div style="text-align:right;margin-top:-15px;margin-right:10px"> <span class="icon-double-angle-right"></span></div>
+                     	        </li>
+                     	        	
+                     	        	<div class="postad-container3" > 
+          								      <header class="postad-field-word3">Select an option</header>
+         						 		
+  										            <ul class="postad-field3">		                     	            	     
+
+                                  <?php $checksub=0;?>                	            
+		                     	            <?php foreach ($this->subsubcategories as $subsub_item):?>
+		                     	            <?php if($subsub_item["parent_id"]==$sub_item["subcategory_id"]):
+                                      $checksub++;?>
+                                        <li class="postad-content3">    
+                     									  <a class="postad-a" value="<?php echo $subsub_item['subsubcategory_id'] ?>"> <?php echo $subsub_item['subsubcategory_name']?></a><div style="text-align:right;margin-top:-15px;margin-right:10px"> <span class="icon-double-angle-right"></span></div></li>      
+                                              <div class="postad-container4">
+                                             <header class="postad-field-word4">Select a group
+                                             </header>
+                                              <ul class="postad-field4">
+                                              <li class="postad-content4"><a value="person">个人发布</a>
+                                              </li>
+                                              <li class="postad-content4"><a value="company">企业发布</a>
+                                              </li>
+                                           </ul>
+                                           </div>   
+                                        <?php endif;?>
+				                     	        <?php endforeach;?>
+                                        <?php if($checksub==0):?>
+                                              <li class="postad-content3 postad-group"><a value="person">个人发布</a>
+                                              </li>
+                                              <li class="postad-content3 postad-group"><a value="company">企业发布</a>
+                                              </li>
+                                      <?php endif;?>    
+                                      </ul>
+                                    </div>                   	              
+		                            <?php endif?>
+                     	      <?php endforeach;?>
+                     	  </ul>
+                     	</div>	             
+               <?php endforeach; ?>
+               </ul>            
+         
+           </div>
+</div>
+
+
+
+
+
+

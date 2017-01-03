@@ -1,0 +1,99 @@
+<div class="mobile-version">
+<div class="signup">
+
+ 	     <div class="mobile-top-bar register-top-bar">
+	    	<div class="return-icon">
+	    	  <a class="return-to-home-btn" href="/index/index">首页</a>
+	    	</div>
+	    	<div class="logo-service"><h2><i class="icon-user"> </i> 注册成为会员</h2>
+	    	    
+	    	</div>
+	     </div>	
+	    	<form id="mobile-login-form" >
+	    	 <div class="home-signup-email text-field align-center">
+		       <input type="text" name ="email" class="mobile-text-input " id="register-email"  placeholder="请输入注册邮箱" value="">	  
+		       <i class="icon-envelope-alt  icon-select" ></i>
+		       <div class="register-notice " id="email_Tip"></div>
+	    	</div>
+	    	 <div class="home-signup-password text-field align-center">
+		       <input type="password" name ="password" class="mobile-text-input " id="register-password" placeholder="请输入密码" value="">	  
+		       <i class="icon-lock  icon-select" ></i> 
+		       <div class="register-notice " id="password_Tip"></div>     
+	    	</div>
+	    	<div class="home-signup-password text-field align-center">
+		       <input type="password" name ="cpassword" class="mobile-text-input " id="register-cpassword" placeholder="请确认密码" value="">	  
+		       <i class="icon-lock  icon-select" ></i>    
+		       <div class="register-notice " id="cpassword_Tip"></div>  
+	    	</div>
+	    	<div class="register-submit text-field align-center">
+		       <input type="button" name ="" class="mobile-register-submit submit-btn" id="mobile-register-submit" value="注  册">	  
+		           
+	    	</div>
+		 </form>
+    	 <script type="text/javascript">
+            
+    	    $('#mobile-register-submit').click(function(){       	    
+    			var email=$('#register-email').val().trim();
+    			var password=$('#register-password').val().trim();
+    			var cpassword=$('#register-cpassword').val().trim(); 			
+    			var img = "<i class='icon-lightbulb' style='color:red; margin-right:8px;'></i>";
+    		  if(email=="" || !validateEmail(email) ){
+    		  		$('#email_Tip').empty();
+    		  	    txt = "请输入正确的邮箱";
+    				$('#email_Tip').append(img,txt);
+    				return;	
+    		    }else if(password=="" || !validatePassword(password)){
+    		  		$('#password_Tip').empty();
+    		  		txt = "密码至少为7位数字或字母组成";
+    				$('#password_Tip').append(img,txt);
+    				return;
+    		   }else if(cpassword!=password){
+	    		  	$('#cpassword_Tip').empty();
+	    		  	txt = "两次输入的密码不匹配";
+	    			$('#cpassword_Tip').append(img,txt);
+	    			return;
+    		   }else{
+    			   $('#cpassword_Tip').empty();
+    			   $('#password_Tip').empty();
+    			   $('#email_Tip').empty();  
+    			   showProcessImage();	   			       								   
+		    			$.ajax({		   
+				            url:"/user/signup",   
+				            data:{            
+				                email:email, 
+				                password:password    
+				            },                    
+				            type:"POST",           
+				            dataType:"text", 
+				            success:function(data)
+				            {  	
+				            	clearProcessImage();
+				                if(data =="1"){
+				                	$('#email_Tip').empty();
+				    		  	    txt = "此邮箱已被注册";
+				    				$('#email_Tip').append(img,txt);				          	      	  
+				   	            }else{
+					   	            if(data =="2"){
+					   	             window.location.href='/user/registersucess';				
+					   	            }else{
+										//注册失败
+					   	            }
+				   	            }
+				   					            	          
+				            }
+				            
+				        });   
+					
+    		   }
+    		  
+    		  
+    	    });
+    	 </script>
+ 	
+</div>
+</div>
+
+<!--end of  mobile -->
+
+
+<!--desktop -->

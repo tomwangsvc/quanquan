@@ -1,0 +1,235 @@
+﻿<div class="recruitment-image-div"><img class="recruitment_image recuit-index-border" src="/images/Beach.jpg" ></div>
+
+<div class="recuit-index-container-main">
+	<div class="recuit-index-row-1">
+		<div id="recuit-index-google-map" class="recuit-index-col-google-map recuit-index-border">
+		</div>
+		<div id="recuit-index-window-location" class="recuit-index-col-location recuit-index-border">
+	    	<span class="recuit-index-config-input">区域：</span>
+	    	<label class="recuit-index-drop-select-label">
+	    		<select class="recuit-index-drop-select" style="width: 240px;">
+		    		<option value="all">奥克兰</option>
+		    		<option>怀卡托</option>
+		    		<option>惠灵顿</option>
+		    	</select>
+	    	</label><br/>
+	    	<span class="recuit-index-config-input">城市：</span>
+	    	<label class="recuit-index-drop-select-label">
+	    		<select class="recuit-index-drop-select" style="width: 240px;">
+		    		<option value="all">奥克兰</option>
+		    		<option>汉密尔顿</option>
+		    		<option>惠灵顿</option>
+		    	</select>
+	    	</label><br/>
+	    	<span class="recuit-index-config-input">城镇：</span>
+	    	<label class="recuit-index-drop-select-label">
+	    		<select class="recuit-index-drop-select" style="width: 240px;">
+		    		<option value="all">奥克兰</option>
+		    		<option>怀卡托</option>
+		    		<option>惠灵顿</option>
+		    	</select>
+	    	</label><br/>
+		</div>
+		<div id="recuit-index-window-qualification" class="recuit-index-col-qualification recuit-index-border">
+	    	<span class="recuit-index-config-input">领域：</span>
+	    	<label class="recuit-index-drop-select-label">
+	    		<select class="recuit-index-drop-select" style="width: 240px;">
+		    		<option value="all">计算机</option>
+		    		<option>会计</option>
+		    		<option>销售</option>
+		    	</select>
+	    	</label><br/>
+	    	<span class="recuit-index-config-input">专业：</span>
+	    	<label class="recuit-index-drop-select-label">
+	    		<select class="recuit-index-drop-select" style="width: 240px;">
+		    		<option value="all">计算机</option>
+		    		<option>会计</option>
+		    		<option>销售</option>
+		    	</select>
+	    	</label>
+	    	
+		</div>
+		<div id="recuit-index-window-type" class="recuit-index-col-type recuit-index-border">
+	    	<span class="recuit-index-config-input">性质：</span>
+		    <input type="checkbox" name="checkboxG4" id="checkbox-any" class="recuit-index-checkbox-input" /><label for="checkbox-any" class="css-label">不限</label>
+		    <input type="checkbox" name="checkboxG4" id="checkbox-fulltime" class="recuit-index-checkbox-input" /><label for="checkbox-fulltime" class="css-label">全职</label>
+		    <input type="checkbox" name="checkboxG4" id="checkbox-parttime" class="recuit-index-checkbox-input" /><label for="checkbox-parttime" class="css-label">兼职</label>
+		    <input type="checkbox" name="checkboxG4" id="checkbox-contract" class="recuit-index-checkbox-input" /><label for="checkbox-contract" class="css-label">合同/临时</label>
+		    <input type="checkbox" name="checkboxG4" id="checkbox-volunteer" class="recuit-index-checkbox-input" /><label for="checkbox-volunteer" class="css-label">志愿</label>
+		    <input type="checkbox" name="checkboxG4" id="checkbox-other" class="recuit-index-checkbox-input" /><label for="checkbox-other" class="css-label">其它</label>
+		</div>
+	    	
+		<div class="recuit-index-col-wage-range recuit-index-border">
+			<span class="recuit-index-config-input">周薪：</span>
+	    	<span class="recuit-index-config-input">$</span>
+	    	<label class="recuit-index-drop-select-label">
+	    		<select class="recuit-index-drop-select" style="width: 90px;">
+		    		<option value="all">任意</option>
+		    		<option></option>
+		    	</select>
+	    	</label>
+	    	<img src="/images/iconfont-arrow-current-pointer.png" style="width: 20px; height: 20px;">
+		    <span class="recuit-index-config-input">$</span>
+		    <label class="recuit-index-drop-select-label">
+		    	<select class="recuit-index-drop-select" style="width: 90px;">
+		    		<option value="all">任意</option>
+		    		<option></option>
+		    	</select>
+		    </label>
+		</div>
+		<div id="recuit-index-search-window" class="recuit-index-col-search recuit-index-border">
+		    <input type="search" class="recuit-index-search-input" id="search" placeholder="输入关键字">      
+		    <button type="submit" class="recuit-index-search-btn"><i class="icon-search"></i></button>
+		</div>
+		<div class="recuit-index-col-save-search">
+			<button class="recuit-index-save-btn"><span>保存当前搜索<i class="icon-save" style="margin-left: 5px;"></i></span></button>
+		</div>
+	</div>
+
+	<?php $jobs = $this->jobs; ?>
+			<?php 
+
+                print "<pre>";
+ 				//print_r($jobs);
+                print "</pre>";
+			?>
+
+	<div class="recuit-index-row-2">
+		<div class="recuit-index-col-current-page recuit-index-border">
+			<div class="recuit-index-col-current">
+				<a href="#" class="recuit-index-current-color" style="margin-right: 10px;"><i class="icon-home icon-2x"></i> 首页</a>>
+				<a href="#" class="recuit-index-current-color" style="margin-right: 10px;">工作</a>>
+				<a href="#" class="recuit-index-current-color"style="margin-right: 10px;">科技</a>>
+				<a href="javascript:void(0)" style="margin-right: 10px;" class="recuit-index-dropdown recuit-index-current-color">软件工程师<img class="recuit-index-slide-icon" src="/images/dropdown-icon.png"></a>
+				<div class="recuit-index-dropdown-div recuit-index-border"></div>
+			</div>
+			<div class="recuit-index-col-result-num">
+				<span>为您找到<span class="recuit-index-result-num">999</span>个结果</span> 
+			</div>
+		</div>
+		<div class="recuit-index-col-result">
+			<div class="recuit-index-result-title" style="font-weight: bold; font-size: 1.3em; margin-top: 20px;">搜索结果</div>
+			<ul class="recuit-index-result-table" style="margin-left: -40px;">
+				<?php $i=0;?>
+				<?php foreach ($this->jobs as $job):?>
+					<?php $i++?>
+					<li class="recuit-index-outer">
+						<ul class="recuit-index-one-result" style="margin-left: -40px;">
+							<li class="recuit-index-map-marker"  >
+								<span class="recuit-index-result-order"></span><img src="/images/markers/iconb<?php echo $i;?>.png">
+							</li> 
+							<li class="recuit-index-job-details-col">   
+					        	<div class="recuit-index-job-listing-title">
+					                <a href="#" style="font-weight: bold;font-size: 1.2em;"><?php echo $job['title'];?></a> 
+					            </div>
+					            <div class="recuit-index-job-listing-short-summary">
+					            	<span>
+						            	<?php if(mb_strlen($job['requirement'],'UTF8')>60):?>
+						                	<?php echo mb_substr($job['requirement'],0,60,"UTF8")."...";?>
+						            	<?php endif;?>
+						            	<?php if(mb_strlen($job['requirement'],'UTF8')<=60):?>
+						                	<?php echo ($job['requirement']);?>
+						            	<?php endif;?>
+					            	</span>
+					            </div>
+					            <div class="recuit-index-job-listing-attributes">
+					                <span class="recuit-index-job-listing-orgnization"><?php echo $job['company'];?></span>
+					                <span class="recuit-index-job-listing-attributeSpacer">|</span>
+					                <span class="recuit-index-job-listing-date"><?php echo $job['listed_date'];?></span>
+					                <span class="recuit-index-job-listing-attribute"></span>
+					            </div>
+					            <div class="recuit-index-contect-address">
+					     			<span class="recuit-index-job-listing-location"><input id="recuit-index-job-listing-location-input" value="<?php echo $job['town'];?>, <?php echo $job['city'];?>" readonly="readonly" style="width: 300px; border:0;"></input></span>
+					        	</div>
+					        </li>
+					        <li class="recuit-index-job-contect-col">
+					        	<div class="recuit-index-contect-logo">
+					        		<div class="recuit-index-div-inimg"><img src="/images/logo.png">&nbsp;</div>
+					        	</div> 
+					            <div class="recuit-index-save-to-watchlist">
+								    <button class="recuit-index-save-to-watchlistLink recuit-index-border" onclick=""><i class="icon-star-empty"></i> 存入收藏夹</button>
+								</div>
+					        </li>
+						</ul>
+					</li>
+				<?php endforeach;?>
+				<div class="recuit-index-companies_footer">
+					<div class="recuit-index-center">
+						<ul class="recuit-index-pagination">
+							<li><a href="#">«</a></li>
+							<li><a href="#">1</a></li>
+							<li><a class="active" href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li><a href="#">6</a></li>
+							<li><a href="#">7</a></li>
+							<li><a href="#">»</a></li>
+						</ul>
+					</div>
+		        </div>
+			</ul>
+		</div>
+	</div>
+</div>
+
+
+<script>
+	jQuery(function($) {
+		var script = document.createElement('script');
+		script.src = "http://maps.googleapis.com/maps/api/js?callback=initialize";
+		document.body.appendChild(script);
+	});
+	var geocoder;
+	var map;
+	function initialize(){
+		geocoder = new google.maps.Geocoder();
+		var myOptions = {
+			zoom: 7,
+			mapTypeId: google.maps.MapTypeId.ROADMAP,
+		};
+		map = new google.maps.Map(document.getElementById("recuit-index-google-map"), myOptions);
+		plotMarkers();
+	}
+
+	var locationsArray = [];
+	<?php foreach ($this->jobs as $job):?>
+		locationsArray.push("<?php echo $job['town'].' '.$job['city'].' New Zealand'; ?>");
+	<?php endforeach;?>
+
+	function plotMarkers(){
+		var bounds = new google.maps.LatLngBounds();
+		var infoWindow = new google.maps.InfoWindow(), marker, i;
+		<?php $i=0;?>
+		<?php foreach ($this->jobs as $job):?>
+			<?php $i++?>
+			geocoder.geocode( { 'address': "<?php echo $job['town'].' '.$job['city'].' New Zealand'; ?>"}, function(results, status) { 
+				if (status == google.maps.GeocoderStatus.OK) {
+					bounds.extend(results[0].geometry.location);
+					map.setCenter(results[0].geometry.location);
+					marker = new google.maps.Marker({
+						map: map,
+						position: results[0].geometry.location,
+						animation:google.maps.Animation.BOUNCE,
+						icon:'/images/markers/iconb<?php echo $i;?>.png'
+					});
+
+					google.maps.event.addListener(marker, 'click', (function(marker, i) {
+			            return function() {
+			                infoWindow.setContent("email: <?php echo $job['email']?>"+"<br/>"+
+			                	"contact: <?php echo $job['contact']?>"+"<br/>"+
+			                	"mobil: <?php echo $job['phone']?>");
+			                infoWindow.open(map, marker);
+			            }
+			        })(marker, i));
+
+					map.fitBounds(bounds);
+				}
+				else{
+					alert("Geocode was not successful for the following reason: " + status);
+				}
+			});
+		<?php endforeach;?>
+	}
+</script>
+

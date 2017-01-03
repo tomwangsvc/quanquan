@@ -1,0 +1,15 @@
+eclipse.preferences.version=1
+encoding//application/layouts/scripts/mobile.phtml=UTF-8
+encoding//application/models/DbTable/Categories.php=UTF-8
+encoding//application/models/DbTable/Cities.php=UTF-8
+encoding//application/models/DbTable/Dbrecruits.php=UTF-8
+encoding//application/models/DbTable/Regions.php=UTF-8
+encoding//application/models/DbTable/Subcategories.php=UTF-8
+encoding//application/models/DbTable/Subsubcategories.php=UTF-8
+encoding//application/models/DbTable/Towns.php=UTF-8
+encoding//application/models/DbTable/Users.php=UTF-8
+encoding//application/views/scripts/index/index.phtml=UTF-8
+encoding//application/views/scripts/post/index.phtml=UTF-8
+encoding//public/css/ben.css=UTF-8
+encoding//public/css/style.css=UTF-8
+encoding/<project>=UTF-8

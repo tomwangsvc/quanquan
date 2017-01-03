@@ -1,0 +1,117 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+<title>新西兰全全网</title>
+<meta name="description"  content="" />
+<meta name="categorys" content="" />
+
+<!--  
+<link rel="stylesheet" href="/css/bootstrap.css">
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+-->
+<link href="/css/style.css" rel="stylesheet">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="/Font-Awesome-3.2.1/css/font-awesome.min.css">
+<script src="/js/qq.js"></script>
+<!--[if IE 7]>
+<link rel="stylesheet" href="/Font-wesome-3.2.1/css/font-awesome-ie7.min.css">
+<![endif]-->
+
+
+<script charset="utf-8" src="/KindEditor/kindeditor/kindeditor-min.js"></script>
+<script charset="utf-8" src="/KindEditor/kindeditor/lang/zh_CN.js"></script>
+
+
+ <script src="/js/ben.js"></script>
+ <script src="/js/sheng.js"></script>
+ <script src="/js/lei.js"></script>
+ <link href="/css/ben.css" rel="stylesheet">
+ <link href="/css/sheng.css" rel="stylesheet">
+ <link href="/css/lei.css" rel="stylesheet">
+
+</head>
+ <body class="postad-body">	
+ <div class="desktop-version">
+ <div class="top-container-fluid" > 
+  		<div class="container head_container">
+					<div class="logo_bar">
+						<div class="logo" > <img src="/images/logo.png" ></div>
+						<div class="logo_comment">						
+							<h3>全全网</h3>
+						    <p class="logo_ad">Quickly find anything in NZ</p>
+						</div>
+					</div>
+	
+					<div class="top_nav_bar">
+						<ul class="top_nav">
+						        <li  class="top-nav-category" ><a  class="" href="#">服务大全</a></li>
+						        <li  class="top-nav-category"><a href="#">首页</a></li>
+						        <li  class="top-nav-category"><a class="active top-nav-category" href="#" >工作</a>
+						        
+						        <div class="sub-items c-dropdown">
+						           <ul style="position: static;">
+						            <?php foreach ( $this->recuits as $item ):?>
+					 		         	<li class="sub-item sub-category"><a href=""><?php echo $item['subcategory_name'];?></a> </li>
+					 		       	<?php endforeach;?>							           
+						           </ul>
+						        
+						        </div>
+						        </li> 
+						        <li class="top-nav-category"><a  href="">商务</a>
+						       	 <div class="sub-items c-dropdown">
+						           <ul style="position: static;">
+						            <?php foreach ( $this->businesses as $item ):?>
+					 		         	<li class="sub-item sub-category"><a href=""><?php echo $item['subcategory_name'];?></a> </li>
+					 		       	<?php endforeach;?>							           
+						           </ul>						        
+						        </div>
+						        
+						        </li> 
+						        <li class="top-nav-category"><a  href="#">留学</a></li> 
+						        <li class="top-nav-category"><a  href="">旅行</a>
+						        <div class="sub-items c-dropdown">
+						           <ul style="position: static;">
+						            <?php foreach ( $this->travel as $item ):?>
+					 		         	<li class="sub-item sub-category"><a href=""><?php echo $item['subcategory_name'];?></a> </li>
+					 		       	<?php endforeach;?>							           
+						           </ul>
+						        
+						        </div>
+						        
+						        </li> 
+						</ul>      
+					</div>
+				<div class="top_text_field">	
+					<div class="top_search_bar">
+					       <input class="top_search_field " type="text" value="" placeholder="搜索你需要的...">
+					       <img class="top_search_button" src="/images/search-icon.png" />
+					</div>
+					<div class="top_post_bar">
+					       <input class="top_post_button" type="text" disabled placeholder="免费发布">
+					       <img class="top_post_icon" src="/images/post-icon.png" />
+					</div>
+				</div>
+				
+				<div class=" top_login_bar">
+				     
+				     <img class="top_login_icon" src="/images/login-icon.png" />
+				     <div class="top_login_button">
+				     <a href="" class="">登入</a>
+					 <a href="" class="">注册</a>
+					 </div>
+				</div>
+	
+     </div>
+    <div class="clearfix"></div>
+ </div>
+ 
+ <?php echo $this->layout()->content; ?>
+ 
+ </div>
+</body>
+</html>

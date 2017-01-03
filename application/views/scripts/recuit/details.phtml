@@ -1,0 +1,166 @@
+
+ <?php $job = $this->job; ?>
+			<?php 
+
+                print "<pre>";
+ 				//print_r($job);
+                print "</pre>";
+			?>
+<div class="container job-quick-access-bar">
+   <ul>
+     <li><a href="">奥克兰</a></li>
+	 <li><a href="">惠灵顿</a></li>
+	 <li><a href="">基都城</a></li>
+	 <li><a href="">哈密尔顿</a></li>
+	 <li><a href="">陶朗加</a></li>
+	 <li><a href="">但尼丁</a></li>
+	 <li><a href="">尼尔森</a></li>
+	 <li><a href="">新普利茅斯</a></li>
+	 <li><a href="">吉斯伯恩</a></li>
+	 <li><a href="">奥塔哥</a></li>
+   </ul>
+</div>
+
+<div class="container">
+ <img  src="/images/job_top.jpg" >
+</div>
+
+<div class="container ">
+
+    <div class="job-details-top">
+      <div class="job-details-top-content"> 
+       	 <div class="job-top-content">
+       	    <div class="job-title"><h2 style="float: left; color:red;"><?php echo $job['title'];?></h2></div>
+       	    <div class="job-top-pay">
+       	       <span><small><?php echo $job['pay_type'].":";?></small></span>
+       	       
+       	       <?php if($job['min_pay']!="面议" && $job['min_pay']!="最低时薪"):?>
+       	          <?php if($job['pay_type']=="时薪"):?>
+       	            <a><?php echo $job['min_pay']."-".$job['max_pay'];?></a>
+       	           <?php endif;?> 
+       	          <?php if($job['pay_type']=="年薪"):?>
+       	            <a><?php echo $job['min_pay']."-".$job['max_pay']."K";?></a>
+       	           <?php endif;?> 
+       	       
+       	       <?php endif;?>
+       	       <?php if($job['min_pay']=="面议" ):?>
+       	        <a><?php echo "面议"; ?></a>
+       	       <?php endif;?>
+       	        <?php if($job['min_pay']=="最低时薪" ):?>
+       	          <a><?php echo "最低时薪"; ?></a>
+       	       <?php endif;?>
+       	        
+       	    </div>
+       	 </div>
+       	
+        <div class="job-atrr">
+        
+             <div class="job-qualification">
+  			 <a class="job-qualif-re job-details-top-btn"><i class="icon-suitcase" style="color:#ffa31a"></i>
+  			  <small>学历</small>
+  			 </a>
+   		     <div class="job-attr-result"><span><?php echo $job['qualification'] ?></span></div>
+            </div>
+            
+             <div class="job-qualification">
+  			 <a class="job-qualif-re job-details-top-btn"><i class="icon-asterisk" style="color:#ffa31a"></i>
+  			  <small>经验</small>
+  			 </a>
+   		     <div class="job-attr-result"><span><?php echo $job['experience'] ?></span></div>
+            </div>
+            
+            <div class="job-qualification btn-job-right">
+  			 <a class="job-qualif-re job-details-top-btn "><i class="icon-umbrella" style="color:#ffa31a"></i>
+  			  <small>工签</small>
+  			 </a>
+   		     <div class="job-attr-result"><span><?php echo $job['work_visa'] ?></span></div>
+            </div>
+            
+             <div class="job-qualification btn-job-right">
+  			 <a class="job-qualif-re job-details-top-btn "><i class="icon-heart-empty" style="color:#ffa31a"></i>
+  			  <small>类型</small>
+  			 </a>
+   		     <div class="job-attr-result"><span><?php echo $job['job_type'] ?></span></div>
+            </div>
+            
+        </div>
+     
+      </div>
+
+ 
+    </div>
+      
+    <div class="job-details-med">
+ 	   <span>职位描述</span><br>
+ 	   <div class="job-describtion"><?php echo $job['requirement'] ?></div>
+ 	  
+ 	  <?php if($job['company_summary']!=""):?>
+ 	   <span>公司简述</span><br>
+ 	   <div class="job-describtion"><?php echo $job['company_summary'] ?></div>
+ 	  <?php endif;?>
+ 	 </div>
+
+
+</div>
+<div class="container">
+<div class="job-details-left">
+    <div class="job-left-top">
+      <a class="btn-job-apply-now" href=""><h2>马上申请</h2></a>
+    </div>
+    <div class="job-com-logo">
+      <img alt="company logo" src="/images/beach.jpg">
+    </div>
+     <script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script>
+		function getJobMap() {
+			var geocoder = new google.maps.Geocoder();
+			//var address = "roturua, bay of plenty";
+			//alert(1);
+			var address = "<?php echo $job['town'].', '.$job['city'].', New Zealand'; ?>";
+			var mylat ="";
+			var mylng ="";
+		
+		geocoder.geocode( { 'address': address}, function(results, status) {		
+		  if (status == google.maps.GeocoderStatus.OK) {
+		    var latitude = results[0].geometry.location.lat();
+			var longitude = results[0].geometry.location.lng();
+		    } 
+				
+			mylat = latitude;
+			mylng = longitude;
+			var mapProp = {		
+		    center:new google.maps.LatLng(mylat,mylng),
+		    zoom:8,
+		    mapTypeId:google.maps.MapTypeId.ROADMAP
+		  };
+		  var map=new google.maps.Map(document.getElementById("googleMap"), mapProp);
+
+		  }); 
+
+		}
+		//google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+    <div class="job-com-details">
+       <!--  <div class="jcd-company j-a-d"><p><?php echo $job['company'] ?></p></div>-->
+       <div class="jcd-map j-a-d" id="googleMap"></div>
+       <div class="jcd-phone j-a-d"></div>
+       <div class="jcd-website j-a-d"></div>    
+    </div>
+    <div class="job-left-btn">
+      <a class="job-s-btn1 job-s-btn"><i class="icon-folder-close icon-large job-left-icon" ></i></a>
+      <a class="job-s-btn2 job-s-btn" onClick="getJobMap();"><i class="icon-map-marker icon-large job-left-icon"></i></a>
+      <a class="job-s-btn3 job-s-btn"><i class="icon-phone icon-large job-left-icon"></i></a>
+      <a class="job-s-btn4 job-s-btn"><i class="icon-info-sign icon-large job-left-icon"></i></a>
+    </div>
+   
+   
+</div>
+</div>
+
+<div class="container">
+<div class="job-details-bottom">
+  	
+  	
+  	
+</div>
+</div>
